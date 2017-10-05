@@ -8,7 +8,8 @@ started working at 6 pm wednesday.
 
 Id like to thank TA Phil Wang for answering my dumb questions.
 
-
+its 12:41am and I’m finally done with the meat of this lab. 
+now on to styling.
 
 
 

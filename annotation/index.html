@@ -10,11 +10,188 @@
 
 <h1 id="title">A Classic</h1>
 
-<video src="https://www.cs.tufts.edu/comp/20/classic.mp4" id="a_classic" controls></video>
+<video src="https://www.cs.tufts.edu/comp/20/classic.mp4" id="a_classic" controls>
+	<p>If youre seeing this your browser probably doesnt support doesnt support HTML5 video. Here is a <a href="https://www.cs.tufts.edu/comp/20/classic.mp4">link to the video</a> instead. </p>
+</video>
 <div id="lyrics"></div>
 
 <script>
 	// Complete this section and create a CSS file named style.css
+	
+
+
+var vid = document.getElementById("a_classic");
+var karaoke = document.getElementById("lyrics");
+
+
+vid.addEventListener("timeupdate",function(){
+    if (vid.currentTime>0)
+    {
+        karaoke.innerHTML="*Orchestra opens*";
+    }
+},false)
+
+vid.addEventListener("timeupdate",function(){
+    if (vid.currentTime>9.65)
+    {
+        karaoke.innerHTML="Children have You ever met the Bogeyman before No, of course You haven't for You're much too good, I'm sure;";
+    }
+},false)
+
+vid.addEventListener("timeupdate",function(){
+    if (vid.currentTime >17.65)
+    {
+        karaoke.innerHTML="Don't You be afraid of him if he should visit You, He's a great big coward, so I'll tell You what to do";
+    }
+},false)
+
+vid.addEventListener("timeupdate",function(){
+    if (vid.currentTime >25.65)
+    {
+        karaoke.innerHTML="Hush, hush, hush, here comes the Bogeyman, Don't let him come too close to You, he'll catch you if he can.";
+    }
+},false)
+
+vid.addEventListener("timeupdate",function(){
+    if (vid.currentTime >33.65)
+    {
+        karaoke.innerHTML="Just pretend that you're a crocodile And you will find that Bogeyman will run away a mile.";
+    }
+},false)
+
+vid.addEventListener("timeupdate",function(){
+    if (vid.currentTime >41.65)
+    {
+        karaoke.innerHTML="Say Shoo shoo and stick him with a pin Bogeyman will very nearly jump out of his skin";
+    }
+},false)
+
+vid.addEventListener("timeupdate",function(){
+    if (vid.currentTime >49.35)
+    {
+        karaoke.innerHTML="Say buzz buzz just like the wasps that stings Bogeyman will think you are an elephant with wings";
+    }
+},false)
+
+vid.addEventListener("timeupdate",function(){
+    if (vid.currentTime >57.15)
+    {
+        karaoke.innerHTML="Hush, hush, hush, here comes the Bogeyman";
+    }
+},false)
+
+vid.addEventListener("timeupdate",function(){
+    if (vid.currentTime >64.95)    {
+        karaoke.innerHTML="Tell him you've got soldiers in your bed";
+    }
+},false)
+
+vid.addEventListener("timeupdate",function(){
+    if (vid.currentTime >68.50)
+    {
+        karaoke.innerHTML="For he will never guess that they are only made of lead";
+    }
+},false)
+
+vid.addEventListener("timeupdate",function(){
+    if (vid.currentTime >72.55)
+    {
+        karaoke.innerHTML="*trumpet solo* Ta-tata-ta-ta-ta-ta-taa, Ta-tata-tata-tata-taaaa! Ta-tata-ta-ta-ta-ta-taa, Ta-tata-ta-ta-TAAAA!";
+    }
+},false)
+
+vid.addEventListener("timeupdate",function(){
+    if (vid.currentTime >80.55)
+    {
+        karaoke.innerHTML="Say Hush hush, he'll think that you're asleep If you make a lovely snore away he'll softly creep";
+    }
+},false)
+
+vid.addEventListener("timeupdate",function(){
+    if (vid.currentTime >88.55)
+    {
+        karaoke.innerHTML="Sing this tune you children one and all Bogeyman will run away, he'll think it's Henry Hall!";
+    }
+},false)
+
+vid.addEventListener("timeupdate",function(){
+    if (vid.currentTime >96.15)
+    {
+        karaoke.innerHTML="When the shadows of the evening creep across the sky And your Mummy comes upstairs to sing a lullaby";
+    }
+},false)
+
+vid.addEventListener("timeupdate",function(){
+    if (vid.currentTime >104.00)
+    {
+        karaoke.innerHTML="Tell her that the bogeyman no longer frightens you Uncle Henry's very kindly told you what to do";
+    }
+},false)
+
+vid.addEventListener("timeupdate",function(){
+    if (vid.currentTime >111.30)
+    {
+        karaoke.innerHTML="Hush, hush, hush, here comes the Bogeyman Don't let him come too close to you, He'll catch you if he can";
+    }
+},false)
+
+vid.addEventListener("timeupdate",function(){
+    if (vid.currentTime >119.30)
+    {
+        karaoke.innerHTML="Just pretend your teddy bear's a dog Then shout out, 'Fetch him, Teddy!' and he'll hop off like a frog.";
+    }
+},false)
+
+vid.addEventListener("timeupdate",function(){
+    if (vid.currentTime >127.30)
+    {
+        karaoke.innerHTML="solo!";
+    }
+},false)
+
+vid.addEventListener("timeupdate",function(){
+    if (vid.currentTime >135.10)
+    {
+        karaoke.innerHTML="Say Meoow, pretend that you're a cat He'll think you may scratch him that will make him fall down flat";
+    }
+},false)
+
+vid.addEventListener("timeupdate",function(){
+    if (vid.currentTime >143.10)
+    {
+        karaoke.innerHTML="Just pretend he isn't really there You will find that Bogey man will vanish in thin air";
+    }
+},false)
+
+vid.addEventListener("timeupdate",function(){
+    if (vid.currentTime >150.30)
+    {
+        karaoke.innerHTML="orchestra!! songs almost over...";
+    }
+},false)
+
+vid.addEventListener("timeupdate",function(){
+    if (vid.currentTime >158.60)
+    {
+        karaoke.innerHTML="Here's one way to catch him without fail Just keep a little salt with you";
+    }
+},false)
+
+vid.addEventListener("timeupdate",function(){
+    if (vid.currentTime >164.40)
+    {
+        karaoke.innerHTML="and put it on his tail";
+    }
+},false)
+
+vid.addEventListener("timeupdate",function(){
+    if (vid.currentTime >166.00)
+    {
+        karaoke.innerHTML="*trrrrrrrrrp*";
+    }
+},false)
+
+
 </script>
 </body>
 </html>	

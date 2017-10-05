@@ -13,3 +13,7 @@ now on to styling.
 
 
 
+discovered that i can style the title in css with #title {} OR h1 {}.
+
+1.11am
+done.

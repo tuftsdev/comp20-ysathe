@@ -23,11 +23,7 @@ var infowindow = new google.maps.InfoWindow();
 
 
 
-var url = "https://defense-in-derpth.herokuapp.com/sendLocation";
-request.open("POST", url, true);
-request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-request.onload = function(){ console.log(request.responseText); }
-request.send("login=Fjh3A8Xk&lat="+myLat+"&lng="+myLng)
+
 
 function init()
 {
@@ -40,6 +36,16 @@ function getMyLocation() {
 		navigator.geolocation.getCurrentPosition(function(position) {
 			myLat = position.coords.latitude;
 			myLng = position.coords.longitude;
+
+			request.open("POST", "https://defense-in-derpth.herokuapp.com/sendLocation", true);
+            request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            request.onload = function(){ console.log(request.responseText); }
+            request.send("login=Fjh3A8Xk&lat="+myLat+"&lng="+myLng)
+			
+
+
+
+
 			renderMap();
 		});
 	}
@@ -68,6 +74,9 @@ function renderMap()
 		infowindow.open(map, marker);
 	});
 }
+
+
+
 		</script>
 	</head>
 	

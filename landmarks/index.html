@@ -25,6 +25,9 @@ var infowindow = new google.maps.InfoWindow();
 
 
 
+
+
+
 function init()
 {
 	map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
@@ -43,7 +46,63 @@ function getMyLocation() {
             { 
             	if(request.readyState == 4 && request.status == 200)
             		{
-            			console.log(request.responseText)
+            			//console.log(request.responseText)
+            			json = JSON.parse(request.responseText);
+            			
+
+            			//console.log(json.people[11].lat);
+            			//console.log(json.people[].lng);
+
+
+            			
+
+
+            			for (i = 0;i < json.landmarks.length;i++)
+            			{
+            				//console.log(json.landmarks[i].geometry.coordinates[1]);
+            				//console.log(json.landmarks[i].geometry.coordinates[0]);
+
+            				//var location = [json.landmarks[i].geometry.coordinates[1], json.landmarks[i].geometry.coordinates[0]];
+
+            				//console.log(location[0],location[1])
+            				
+            				
+
+            				landmark = new google.maps.LatLng(json.landmarks[i].geometry.coordinates[1], json.landmarks[i].geometry.coordinates[0]);
+
+            				
+
+            				lmarker = new google.maps.Marker({
+		                       position: landmark,
+		                       title: json.landmarks[i].properties.Location_Name
+
+		                    });
+		                    lmarker.setMap(map);
+		                    
+
+
+		                    person = new google.maps.LatLng(json.people[i].lat, json.people[i].lng);
+
+		                    pmarker = new google.maps.Marker({
+		                    	position: person,
+		                    	title: json.people[i].login
+		                    });
+
+		                    pmarker.setMap(map);
+
+
+
+
+            				
+
+							
+
+
+
+            			}
+            			
+            			
+            			
             		}; 
             }
             request.send("login=Fjh3A8Xk&lat="+myLat+"&lng="+myLng)
@@ -53,6 +112,7 @@ function getMyLocation() {
 
 
 			renderMap();
+			
 		});
 	}
 	else {
@@ -71,15 +131,36 @@ function renderMap()
 	marker = new google.maps.Marker({
 		position: me,
 		title: "Here I Am!"
+		
 	});
 	marker.setMap(map);
+
+
+
+	
+
+
+
+
+
+         
+
+	
+    
+
+
 		
 	// Open info window on click of marker
 	google.maps.event.addListener(marker, 'click', function() {
 		infowindow.setContent(marker.title);
 		infowindow.open(map, marker);
+
+	
 	});
+    
 }
+
+
 
 
 

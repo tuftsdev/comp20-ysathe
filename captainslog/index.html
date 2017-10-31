@@ -9,8 +9,32 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
         // Your work will be done here...
-        var currtime = new Date();
-        console.log(currtime.toDateString(), currtime.toTimeString());
+        $(document).ready(function(){
+            $("#msg").keydown(function(){
+                txt = $("#msg").val();
+                
+                time = new Date();
+
+               
+
+                message = time.toDateString() +" "+ time.toTimeString() + " - " + txt;
+
+                
+
+                localStorage.setItem( time, message);
+
+                output = "";
+                for (key in localStorage) {
+                    output = "<p>" + localStorage[key] + "</p>\n" + output;
+                }
+
+                $("#log").html(output);
+
+
+                
+
+            });
+        });
     </script>
 </head>
 

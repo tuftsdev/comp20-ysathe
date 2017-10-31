@@ -1,0 +1,1 @@
+Thanks to TA Toby! (Glover) for introducing me to the .ready function,(a function i later realised had been staring me in the face the whole time), something without which i would have pretty much stayed on the bench, this entire lab.

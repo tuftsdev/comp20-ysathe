@@ -40,7 +40,7 @@ function getMyLocation() {
 			myLat = position.coords.latitude;
 			myLng = position.coords.longitude;
 
-			request.open("POST", "https://defense-in-derpth.herokuapp.com/sendLocation", true);
+			request.open("POST", "https://hidden-wave-71440.herokuapp.com/sendLocation", true);
             request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             request.onreadystatechange = function()
             { 
@@ -78,6 +78,8 @@ function getMyLocation() {
 
 		                    });
 		                    lmarker.setMap(map);
+
+		                    /*
 		                    
 
 
@@ -89,6 +91,21 @@ function getMyLocation() {
 		                    });
 
 		                    pmarker.setMap(map);
+		                    */
+
+
+		                    
+		                    
+
+		                    
+
+	
+	                    }
+	                    google.maps.event.addListener(lmarker, 'click', function() {
+		                        lmarker.setContent(lmarker.title);
+		                        lmarker.open(map, lmarker);
+		                    });
+
 
 
 
@@ -99,8 +116,8 @@ function getMyLocation() {
 
 
 
-            			}
             			
+
             			
             			
             		}; 
@@ -157,6 +174,7 @@ function renderMap()
 
 	
 	});
+    
     
 }
 
